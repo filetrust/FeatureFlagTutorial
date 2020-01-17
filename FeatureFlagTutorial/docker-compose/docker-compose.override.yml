@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  service:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "2241:80"
+      - "9089:9089"      
+
+    volumes:
+      - ~/.kube/config:/root/.kube/config:ro

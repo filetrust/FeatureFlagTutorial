@@ -1,0 +1,6 @@
+[submodule "Source/Business/libs/GlasswallPlatformEngine"]
+	path = Source/Business/libs/GlasswallPlatformEngine
+	url = https://glasswall@dev.azure.com/glasswall/Glasswall%20Cloud/_git/Glasswall.Platform.Engine
+[submodule "Test/Service.Tests.L1/Glasswall.Common.Testing.FileRepository"]
+	path = Test/Service.Tests.L1/Glasswall.Common.Testing.FileRepository
+	url = https://glasswall@dev.azure.com/glasswall/Glasswall%20Cloud/_git/Glasswall.Common.Testing.FileRepository

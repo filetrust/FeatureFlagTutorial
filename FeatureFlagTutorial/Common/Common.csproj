@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Glasswall.FileTrust.RepoName.Common</AssemblyName>
+    <RootNamespace>Glasswall.FileTrust.RepoName.Common</RootNamespace>
+  </PropertyGroup>
+
+</Project>

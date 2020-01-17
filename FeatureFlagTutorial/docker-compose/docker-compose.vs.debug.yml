@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  service:
+    image: ${DOCKER_REGISTRY}service
+    build:
+      context: .
+      dockerfile: Source/Service/Dockerfile
+    entrypoint: kubefwd services -n default -n cluster-shared
+      
