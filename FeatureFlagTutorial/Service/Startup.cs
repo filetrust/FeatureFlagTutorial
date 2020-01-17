@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Prometheus;
 using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.FeatureManagement;
 
 namespace Glasswall.FileTrust.RepoName.Service
 {
@@ -56,6 +57,8 @@ namespace Glasswall.FileTrust.RepoName.Service
                 .AddHostedService<HostedService>();
 
             EnableSwagger(services);
+
+            services.AddFeatureManagement();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -83,6 +86,7 @@ namespace Glasswall.FileTrust.RepoName.Service
                 c.RoutePrefix = string.Empty;
             });
 
+            app.UseAzureAppConfiguration();
             app.UseMvc();
         }
 

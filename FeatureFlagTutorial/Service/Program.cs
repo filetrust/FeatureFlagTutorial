@@ -2,6 +2,7 @@
 using Glasswall.FileTrust.RepoName.Business.Instrumentation;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Prometheus;
 
@@ -30,6 +31,15 @@ namespace Glasswall.FileTrust.RepoName.Service
                 {
                     logging.ClearProviders();
                     logging.AddDebug();
+                })
+                .ConfigureAppConfiguration((hostingContext, config) =>
+                {
+                    var settings = config.Build();
+                    config.AddAzureAppConfiguration(options =>
+                    {
+                        options.Connect(settings["FeatureFlagTutorial"])
+                            .UseFeatureFlags();
+                    });
                 });
     }
 }
