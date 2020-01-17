@@ -14,6 +14,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Cors" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Json" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Azure.AppConfiguration.AspNetCore" Version="3.0.0-preview-010560002-1165" />
+    <PackageReference Include="Microsoft.FeatureManagement.AspNetCore" Version="2.0.0-preview-010610001-1263" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets" Version="1.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="4.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="4.0.1" />
