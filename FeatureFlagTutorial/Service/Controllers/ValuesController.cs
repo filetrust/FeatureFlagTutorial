@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.FeatureManagement;
+using Microsoft.FeatureManagement.Mvc;
 
 namespace Glasswall.FileTrust.RepoName.Service.Controllers
 {
@@ -8,8 +10,16 @@ namespace Glasswall.FileTrust.RepoName.Service.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly IFeatureManager _featureManager;
+
+        public ValuesController(IFeatureManager featureManager)
+        {
+            _featureManager = featureManager;
+        }
+
         // GET api/values
         [HttpGet]
+        [FeatureGate(MyFeatureFlags.Beta)]
         public ActionResult<IEnumerable<string>> Get()
         {
             return new string[] { "value1", "value2" };
